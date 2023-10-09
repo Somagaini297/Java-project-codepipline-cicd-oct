@@ -2,7 +2,7 @@
 
 cd /opt
 
-cp Dockerfile .
+scp -i Dockerfile /opt/
 
 docker build -t javaapp:v1 .
 
