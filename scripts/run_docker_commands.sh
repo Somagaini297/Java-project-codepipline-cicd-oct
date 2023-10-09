@@ -2,6 +2,8 @@
 
 cd /opt
 
+cp Dockerfile .
+
 docker build -t javaapp:v1 .
 
 docker images
