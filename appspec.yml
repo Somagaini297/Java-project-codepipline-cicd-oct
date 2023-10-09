@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 
 files:
-  - source: /Dockerfile
+  - source: /scripts/Dockerfile
     destination: /opt
 
 hooks:
