@@ -2,8 +2,6 @@
 
 cd /opt
 
-scp -i Dockerfile /opt/
-
 docker build -t javaapp:v1 .
 
 docker images
