@@ -7,7 +7,7 @@ files:
 
 hooks:
   ApplicationStop:
-    - location: scripts/removeimagecontainer.sh
+    - location: scripts/remove_imagecontainer.sh
       timeout: 300
       runas: root
   BeforeInstall:
