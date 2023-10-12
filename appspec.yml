@@ -5,6 +5,9 @@ files:
   - source: /scripts/Dockerfile
     destination: /opt
 
+  - source: /target/login##1.0.war
+    destination: /opt
+
 hooks:
   ApplicationStop:
     - location: scripts/removeimagecontainer.sh
@@ -13,10 +16,6 @@ hooks:
 
   BeforeInstall:
     - location: scripts/install_dependencies.sh
-      timeout: 300
-      runas: root 
-
-    - location: scripts/download_warfile.sh
       timeout: 300
       runas: root 
 
