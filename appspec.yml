@@ -9,6 +9,7 @@ files:
     destination: /opt
 
 hooks:
+
   ApplicationStop:
     - location: scripts/removeimagecontainer.sh
       timeout: 300
