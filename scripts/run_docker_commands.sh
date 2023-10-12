@@ -1,18 +1,8 @@
 #!/bin/bash
 
+set -e
+
 cd /opt
-
-docker ps -a
-
-doceker stop javaapp-container
-
-docker rm javaapp-container
-
-docker images
-
-docker rmi tomcat
-
-docker rmi javaapp:latest
 
 docker build -t javaapp:latest .
 

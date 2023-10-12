@@ -6,9 +6,13 @@ files:
     destination: /opt
 
 hooks:
+  ApplicationStop:
+    - location: scripts/removeimagecontainer.sh
+      timeout: 300
+      runas: root
 
   BeforeInstall:
-    - location: scripts/install_dependencies.sh
+    - location: scripts/installdependencies.sh
       timeout: 300
       runas: root 
 

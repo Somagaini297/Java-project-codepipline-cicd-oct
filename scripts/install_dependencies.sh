@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 amazon-linux-extras install docker=latest -y
 
 systemctl start docker
