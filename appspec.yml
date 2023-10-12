@@ -11,7 +11,11 @@ files:
 hooks:
 
   ApplicationStop:
-    - location: scripts/removeimagecontainer.sh
+    - location: scripts/removecontainer.sh
+      timeout: 300
+      runas: root
+
+    - location: scripts/removeimages.sh
       timeout: 300
       runas: root
 
