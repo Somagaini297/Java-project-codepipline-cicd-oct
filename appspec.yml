@@ -10,19 +10,20 @@ files:
 
 hooks:
 
+  ApplicationStop:
+    - location: scripts/removecontainer.sh
+      timeout: 300
+      runas: root
+
+    - location: scripts/removeimages.sh
+      timeout: 300
+      runas: root
+
   BeforeInstall:
-     - location: scripts/install_dependencies.sh
-       timeout: 300
-       runas: root
+    - location: scripts/install_dependencies.sh
+      timeout: 300
+      runas: root
        
-#    - location: scripts/removecontainer.sh
-#      timeout: 300
-#      runas: root
-
-#   - location: scripts/removeimages.sh
-#     timeout: 300
-#     runas: root
-
   ApplicationStart:
     - location: scripts/run_docker_commands.sh
       timeout: 300
