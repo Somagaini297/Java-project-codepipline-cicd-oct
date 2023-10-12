@@ -10,4 +10,4 @@ docker images
 
 docker rmi tomcat
 
-docker rmi javaapp
+docker rmi javaapp:latest
