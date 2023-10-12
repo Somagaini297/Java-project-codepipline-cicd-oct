@@ -4,7 +4,7 @@ set -e
 
 docker ps -a
 
-doceker stop javaapp-container
+docker stop javaapp-container
 
 docker rm javaapp-container
 
