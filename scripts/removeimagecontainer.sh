@@ -2,7 +2,7 @@
 
 set -e
 
-docker ps
+docker ps -a
 
 docker stop javaapp-container
 
