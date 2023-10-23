@@ -4,6 +4,6 @@ set -e
 
 aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 649787745281.dkr.ecr.us-east-1.amazonaws.com
 
-docker run -d --name javaapp-container -p 8080:8080 649787745281.dkr.ecr.us-east-1.amazonaws.com/javaapp:latest
+docker run -d --platform linux/arm64 --name javaapp-container -p 8080:8080 649787745281.dkr.ecr.us-east-1.amazonaws.com/javaapp:latest
 
 docker ps -a
