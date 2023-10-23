@@ -3,12 +3,7 @@ os: linux
 
 hooks:
 
-  BeforeInstall:
-    - location: scripts/run_docker_commands.sh
-      timeout: 300
-      runas: root
- 
- ApplicationStop:
+  ApplicationStop:
     - location: scripts/removeimages.sh
       timeout: 300
       runas: root
@@ -16,3 +11,10 @@ hooks:
     - location: scripts/removecontainer.sh
       timeout: 300
       runas: root
+
+  BeforeInstall:
+    - location: scripts/run_docker_commands.sh
+      timeout: 300
+      runas: root
+
+ 
