@@ -4,9 +4,13 @@ phases:
   build:
     commands:
       - echo Build completed on `date`
-      - mvn package
+      - mvn clean install
+      - cp target/*.war /opt
 
 artifacts:
   files:
-     - target/**/*.war
+     - opt/*.war
+     - appsec.yml
+     - scripts/*
   discard-paths: yes
+
