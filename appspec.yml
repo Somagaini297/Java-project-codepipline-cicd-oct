@@ -14,10 +14,7 @@ hooks:
       runas: root
 
   BeforeInstall:
-    - location: scripts/install_dependencies
-      timeout: 300
-      runas: root
-
+   
     - location: scripts/run_docker_commands
       timeout: 300
       runas: root
