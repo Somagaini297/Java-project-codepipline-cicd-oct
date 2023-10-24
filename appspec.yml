@@ -1,7 +1,17 @@
 version: 0.0
 os: linux
 
+files:
+  - source: target/*.war 
+    destination: /usr/local/tomcat/webapps/
+
 hooks:
+
+  ApplicationStop:
+
+    - location: scripts/stop_server
+      timeout: 300
+      runas: root
 
   BeforeInstall:
     - location: scripts/install_dependencies
@@ -26,10 +36,6 @@ hooks:
       timeout: 300
       runas: root
 
-  ApplicationStop:
-
-    - location: scripts/stop_server
-      timeout: 300
-      runas: root
+  
 
  
