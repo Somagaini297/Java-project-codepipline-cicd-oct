@@ -17,7 +17,7 @@ phases:
     commands:
       - echo Build completed on `date`
       - echo building the docker image
-      - docker build --platform linux/arm64/v8 -t  $REPOSITORY_URI:latest .
+      - docker build --platform linux/amd64 -t  $REPOSITORY_URI:latest .
       - docker tag $REPOSITORY_URI:latest $REPOSITORY_URI:$IMAGE_TAG
   
   post_build:
